@@ -1,65 +1,66 @@
-0:00:01 - 0:00:03 : I'm Peppa Pig
-0:00:03 - 0:00:06 : this is my little brother George
-0:00:07 - 0:00:11 : this is Mummy Pig and this is Daddy Pig
-0:00:11 - 0:00:15 : Peppa Pig
-0:00:17 - 0:00:21 : Muddy puddles
-0:00:26 - 0:00:28 : It is raining today
-0:00:28 - 0:00:30 : so Peppa and George cannot play outside
-0:00:32 - 0:00:35 : Daddy it's stopped raining
-0:00:35 - 0:00:36 : Can we go out to play
-0:00:37 - 0:00:39 : Ha ha all right
-0:00:39 - 0:00:40 : Run along you two
-0:00:50 - 0:00:53 : Peppa loves jumping in muddy puddles
-0:00:53 - 0:00:55 : I love muddy puddles
-0:00:56 - 0:01:00 : Peppa
-0:01:00 - 0:01:05 : if you jump in muddy puddles you must wear your boots
-0:01:06 - 0:01:06 : Sorry Mummy
-0:01:16 - 0:01:19 : George likes to jump in muddy puddles too
-0:01:21 - 0:01:26 : George if you jump in muddy puddles you must wear your boots
-0:01:30 - 0:01:32 : Peppa likes to look after her little brother George
-0:01:40 - 0:01:43 : George let's find some more puddles
-0:01:46 - 0:01:53 : Peppa and George are having a lot of fun
-0:01:54 - 0:01:55 : Peppa has found a little puddle
-0:01:56 - 0:01:58 : George has found a big puddle
-0:02:00 - 0:02:02 : George has found a big puddle
-0:02:09 - 0:02:10 : Look George
-0:02:11 - 0:02:13 : there's a really big puddle
-0:02:17 - 0:02:20 : George wants to jump into the big puddle first
-0:02:21 - 0:02:22 : Stop George
-0:02:22 - 0:02:25 : I must check if it's safe for you
-0:02:26 - 0:02:29 : Good it is safe for you
-0:02:34 - 0:02:36 : Sorry George
-0:02:36 - 0:02:37 : it's only mud
-0:02:40 - 0:02:51 : Peppa and George love jumping in muddy puddles
-0:02:53 - 0:03:00 : Come on George let's go and show Daddy Come on Daddy
-0:03:02 - 0:03:08 : Goodness me
-0:03:09 - 0:03:09 : Daddy
-0:03:10 - 0:03:10 : Daddy
-0:03:10 - 0:03:12 : guess what we've been doing
-0:03:12 - 0:03:13 : Let me think
-0:03:14 - 0:03:16 : Have you been watching television
-0:03:17 - 0:03:18 : No no Daddy
-0:03:19 - 0:03:20 : Have you just had a bath
-0:03:21 - 0:03:23 : No no
-0:03:25 - 0:03:26 : I know
-0:03:27 - 0:03:29 : you've been jumping in muddy puddles
-0:03:30 - 0:03:31 : Yes yes Daddy
-0:03:31 - 0:03:33 : we've been jumping in muddy puddles
-0:03:34 - 0:03:38 : And look at the mess you're in
-0:03:38 - 0:03:38 : Oh
-0:03:39 - 0:03:40 : Oh well
-0:03:41 - 0:03:42 : it's only mud
-0:03:43 - 0:03:45 : Let's clean up quickly before Mummy sees the mess
-0:03:48 - 0:03:48 : Daddy
-0:03:49 - 0:03:50 : when we've cleaned up
-0:03:51 - 0:03:53 : will you and Mummy come and play too
-0:03:53 - 0:03:56 : Yes we could all play in the garden
-0:03:58 - 0:04:05 : Peppa and George are wearing their boots
-0:04:06 - 0:04:07 : Mummy and Daddy are wearing their boots
-0:04:09 - 0:04:11 : Peppa loves jumping up and down in muddy puddles
-0:04:12 - 0:04:16 : Everyone loves jumping up and down in muddy puddles
-0:04:24 - 0:04:26 : Oh Daddy Pig
-0:04:26 - 0:04:30 : look at the mess you're in It's only mud
-0:04:33 - 0:04:49 : Peppa Pig
-0:04:49 - 0:04:53 : Peppa Pig
-0:04:54 - 0:04:57 : Peppa Pig
+1.9600000381469727 - 3.7200000286102295 : I'm Peppa Pig
+3.9600000381469727 - 6.519999980926514 : this is my little brother George
+7.21999979019165 - 11.420000076293945 : this is Mummy Pig and this is Daddy Pig
+11.920000076293945 - 15.880000114440918 : Peppa Pig
+17.079999923706055 - 21.299999237060547 : Muddy puddles
+26.360000610351562 - 28.0 : It is raining today
+28.280000686645508 - 30.479999542236328 : so Peppa and George cannot play outside
+32.380001068115234 - 35.36000061035156 : Daddy it's stopped raining
+35.880001068115234 - 36.939998626708984 : Can we go out to play
+37.720001220703125 - 39.36000061035156 : Ha ha all right
+39.81999969482422 - 40.81999969482422 : Run along you two
+50.400001525878906 - 53.18000030517578 : Peppa loves jumping in muddy puddles
+53.70000076293945 - 55.7400016784668 : I love muddy puddles
+56.599998474121094 - 60.70000076293945 : Peppa
+60.86000061035156 - 65.0 : if you jump in muddy puddles you must wear your boots
+66.0 - 66.4800033569336 : Sorry Mummy
+76.72000122070312 - 79.63999938964844 : George likes to jump in muddy puddles too
+81.76000213623047 - 86.68000030517578 : George if you jump in muddy puddles you must wear your boots
+90.37999725341797 - 92.5 : Peppa likes to look after her little brother George
+100.87999725341797 - 103.77999877929688 : George let's find some more puddles
+106.62000274658203 - 113.12000274658203 : Peppa and George are having a lot of fun
+114.37999725341797 - 115.73999786376953 : Peppa has found a little puddle
+117.37999725341797 - 119.22000122070312 : George has found a big puddle
+129.5800018310547 - 130.8800048828125 : Look George
+131.02000427246094 - 133.32000732421875 : there's a really big puddle
+136.9600067138672 - 139.89999389648438 : George wants to jump into the big puddle first
+141.39999389648438 - 142.25999450683594 : Stop George
+142.67999267578125 - 145.6999969482422 : I must check if it's safe for you
+147.83999633789062 - 148.47999572753906 : Good
+148.75999450683594 - 150.36000061035156 : it is safe for you
+150.47999572753906 - 156.17999267578125 : Sorry George
+156.44000244140625 - 157.6999969482422 : it's only mud
+162.63999938964844 - 171.0800018310547 : Peppa and George love jumping in muddy puddles
+177.05999755859375 - 178.6199951171875 : Come on George
+178.72000122070312 - 180.52000427246094 : let's go and show Daddy
+182.4600067138672 - 188.74000549316406 : Goodness me
+189.27999877929688 - 189.6199951171875 : Daddy
+190.27999877929688 - 190.33999633789062 : Daddy
+190.75999450683594 - 192.1199951171875 : guess what we've been doing
+192.89999389648438 - 193.8800048828125 : Let me think
+194.82000732421875 - 196.16000366210938 : Have you been watching television
+197.0399932861328 - 198.05999755859375 : No no Daddy
+199.22000122070312 - 200.5399932861328 : Have you just had a bath
+201.1999969482422 - 203.8000030517578 : No no
+205.6999969482422 - 206.89999389648438 : I know
+207.0800018310547 - 209.5399932861328 : you've been jumping in muddy puddles
+210.36000061035156 - 211.44000244140625 : Yes yes Daddy
+211.67999267578125 - 213.82000732421875 : we've been jumping in muddy puddles
+214.6999969482422 - 218.02000427246094 : Oh and look at the mess you're in
+218.4199981689453 - 219.0 : Oh
+219.72000122070312 - 220.8000030517578 : Oh well
+221.0 - 222.0 : it's only mud
+223.16000366210938 - 225.66000366210938 : Let's clean up quickly before Mummy sees the mess
+228.5399932861328 - 228.83999633789062 : Daddy
+229.02000427246094 - 230.77999877929688 : when we've cleaned up
+231.02000427246094 - 233.25999450683594 : will you and Mummy come and play too
+233.55999755859375 - 236.60000610351562 : Yes we could all play in the garden
+238.13999938964844 - 245.02000427246094 : Peppa and George are wearing their boots
+246.17999267578125 - 247.77999877929688 : Mummy and Daddy are wearing their boots
+249.3800048828125 - 251.77999877929688 : Peppa loves jumping up and down in muddy puddles
+252.3800048828125 - 256.05999755859375 : Everyone loves jumping up and down in muddy puddles
+264.20001220703125 - 266.5 : Oh Daddy Pig
+267.0 - 270.739990234375 : look at the mess you're in It's only mud
+273.5 - 289.0199890136719 : Peppa Pig
+289.6400146484375 - 293.7200012207031 : Peppa Pig
+294.739990234375 - 297.94000244140625 : Peppa Pig
