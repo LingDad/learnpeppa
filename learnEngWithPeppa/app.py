@@ -160,6 +160,16 @@ def index():
     
     return render_template('index.html', video_path=video_path, file_name=file_name, audio_path=audio_path)
 
+@app.route('/save_api_key', methods=['POST'])
+def save_api_key():
+    data = request.json
+    api_key = data.get('api_key')
+    # Here you would typically save the API key securely
+    # For example, you might store it in an environment variable or a secure database
+    # For this example, we'll just print it (don't do this in production!)
+    print(f"Received API key: {api_key}")
+    return jsonify({"message": "API key saved successfully"})
+
 @app.route('/save_timestamp', methods=['POST'])
 def save_timestamp():
     data = request.json
