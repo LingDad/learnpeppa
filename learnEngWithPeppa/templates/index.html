@@ -12,7 +12,7 @@
     <style>
         body {
             font-family: Helvetica, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #5a5757;
             color: #333;
             margin: 0;
             padding: 0;
@@ -307,46 +307,78 @@
         .dropdown {
         position: relative;
         display: inline-block;
-    }
+        }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 250px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px;
-        z-index: 1;
-        right: 0;
-        border-radius: 4px;
-    }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px;
+            z-index: 1;
+            right: 0;
+            border-radius: 4px;
+        }
 
-    .dropdown-content input {
-        width: 100%; 
-        padding: 8px;
-        margin-bottom: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+        .dropdown-content input {
+            width: 100%; 
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-    .dropdown-content button {
-        width: 100%;
-        padding: 8px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+        .dropdown-content button {
+            width: 100%;
+            padding: 8px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-    .dropdown-content button:hover {
-        background-color: #0056b3;
-    }
+        .dropdown-content button:hover {
+            background-color: #0056b3;
+        }
 
-    .show {
-        display: block;
-    }
+        .show {
+            display: block;
+        }
+
+        #dictation-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        }
+
+        #dictation-button i {
+            margin-right: 5px;
+        }
+
+        #dictation-button.running {
+            background-color: #dc3545; /* Red background when running */
+        }
+
+        #dictation-button.running i {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -398,7 +430,7 @@
                         <i class="fas fa-book" style="color: rgb(255, 136, 0);"></i> Generate Learning Material
                     </button>
                     <button id="dictation-button" type="button">
-                        <i class="fas fa-microphone" style="color: rgb(255, 136, 0);"></i> Voice Dictation
+                        <i class="fas fa-microphone"></i> <span>Start Dictation</span>
                     </button>
                 </div>
                 <div class="text-area-container">
@@ -433,6 +465,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+
             console.log('DOM loaded');
             var loadingIndicator = document.getElementById('loading-indicator');
             if (loadingIndicator) {
@@ -487,8 +520,71 @@
                 }
             });
         
+            // dictation-button
+            const userInput = document.getElementById('user-input');
+            let isDictating = false;
+            let mediaRecorder;
+            let audioChunks = [];
 
+            dictationButton.addEventListener('click', function() {
+                isDictating = !isDictating;
+                if (isDictating) {
+                    startDictation();
+                } else {
+                    stopDictation();
+                }
+            });
 
+            async function startDictation() {
+                dictationButton.classList.add('running');
+                dictationButton.querySelector('span').textContent = 'Stop Dictation';
+                
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    
+                    mediaRecorder.ondataavailable = (event) => {
+                        audioChunks.push(event.data);
+                        if (mediaRecorder.state === "recording") {
+                            sendAudioChunk(event.data);
+                        }
+                    };
+
+                    mediaRecorder.start(1000); // Capture audio in 1-second chunks
+                } catch (err) {
+                    console.error('Error accessing microphone:', err);
+                    stopDictation();
+                }
+            }
+
+            function stopDictation() {
+                dictationButton.classList.remove('running');
+                dictationButton.querySelector('span').textContent = 'Start Dictation';
+                
+                if (mediaRecorder && mediaRecorder.state === "recording") {
+                    mediaRecorder.stop();
+                }
+                audioChunks = [];
+            }
+
+            function sendAudioChunk(audioChunk) {
+                const formData = new FormData();
+                formData.append('audio', audioChunk, 'audio.webm');
+
+                fetch('/transcribe', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.text) {
+                        userInput.value += data.text + ' ';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+            
+            // video-player
             if (videoPlayer) {
                 videoPlayer.addEventListener('timeupdate', function() {
                     const currentTime = videoPlayer.currentTime;

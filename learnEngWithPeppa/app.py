@@ -4,11 +4,15 @@ from moviepy.editor import VideoFileClip
 from openai import OpenAI
 from datetime import timedelta
 import markdown
+import whisper
+import tempfile
 
 app = Flask(__name__)
 
 # Set a secret key for session management
 app.secret_key = os.urandom(24)  # This generates a random 24-byte key
+
+model = whisper.load_model("base")
 
 UPLOAD_FOLDER = 'static/uploads/'
 AUDIO_FOLDER = 'static/audios/'
@@ -248,10 +252,29 @@ def generate_learning_material():
     markdown_learning_material = markdown.markdown(learning_material, extensions=['fenced_code', 'codehilite', 'tables', 'toc', 'sane_lists', 'smarty', 'fenced_code'])
     return jsonify({'status': 'success', 'learning_material': markdown_learning_material})
 
-@app.route('/dictation')
-def dictation():
-    # Add functionality for "Dictation" button here
-    return redirect(url_for('index'))
+@app.route('/transcribe', methods=['POST'])
+def transcribe():
+    if 'audio' not in request.files:
+        return jsonify({"error": "No audio file provided"}), 400
+
+    audio_file = request.files['audio']
+
+    # Save the audio chunk to a temporary file
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.webm') as temp_audio:
+        audio_file.save(temp_audio.name)
+        temp_audio_path = temp_audio.name
+
+    try:
+        # Transcribe the audio chunk
+        result = model.transcribe(temp_audio_path)
+        transcribed_text = result['text'].strip()
+
+        return jsonify({"text": transcribed_text})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    finally:
+        # Clean up the temporary file
+        os.unlink(temp_audio_path)
 
 if __name__ == '__main__':
     app.run(debug=True)
